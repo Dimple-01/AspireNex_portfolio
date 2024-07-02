@@ -1,7 +1,15 @@
+
+/* by default - static is always applied  and I cant use top left right properties on static element*/
+/* relative - change in position WRT current window, old gap maintain*/
+/* Absolute - used when overlapping needed, change in position WRT closet position ancestor, no gap maintain*/
+/* Fixed - position is fixed throughout the entire web page*/
+/* Sticky - element remain sticky under its parent conatiner only*/
+
+
 @import "../../vars.css";
 
 .navbar {
-  position: relative;
+  position: relative;   /*by default*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,6 +46,7 @@
   text-decoration: none;
 }
 
+/* making responsive -- apply styles on upto 830 px*/
 @media screen and (max-width: 830px) {
   .navbar {
     flex-direction: column;
@@ -72,7 +81,7 @@
       rgba(25, 55, 109, 1) 100%
     );
     padding: 24px 33px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);  /* 0 horizontal, 0 vertical & 4px is blur value */
   }
 
   .menuOpen {
